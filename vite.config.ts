@@ -7,4 +7,10 @@ export default defineConfig({
     TanStackRouterVite(),
     react(),
   ],
+  // Forzamos a Vite a buscar el router en src/router
+  resolve: {
+    alias: {
+      '@': '/src',
+    },
+  },
 });
