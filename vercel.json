@@ -1,8 +1,14 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/api/index"
+      "source": "/((?!api/|.*\\.).*)",
+      "destination": "/api/index",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-id"
+        }
+      ]
     }
   ]
 }
