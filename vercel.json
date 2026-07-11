@@ -3,6 +3,10 @@
     {
       "source": "/((?!_next|static|api|assets|.*\\..*).*)",
       "destination": "/api/index"
+    },
+    {
+      "source": "/~oauth/(.*)",
+      "destination": "/api/index"
     }
   ]
 }
